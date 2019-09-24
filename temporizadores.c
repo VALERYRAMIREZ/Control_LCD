@@ -8,7 +8,6 @@
 #include "temporizadores.h"
 #include "sistema.h"
 
-
 /* Implementación de las funciones para la configuración de los temporizadores*/
 
 void Confi_Timer1(unsigned int tempo1, unsigned int conf1)/* Función para la 
