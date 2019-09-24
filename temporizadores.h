@@ -17,7 +17,6 @@
 #define         TCKPS8              16
 #define         TCKPS1              0
 
-
 /* Prototipos de función para la configuación de los temporizadores */
 
 void Confi_Timer1(unsigned int tempo1, unsigned int conf1);/* Prototipo de
