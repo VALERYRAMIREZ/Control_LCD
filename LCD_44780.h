@@ -12,6 +12,5 @@
 #include <xc.h> 
 
 
-
 #endif	LCD_44780_H */
 
