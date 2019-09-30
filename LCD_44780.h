@@ -11,6 +11,10 @@
 
 #include <xc.h> 
 
+/* Definición de terminales para el control de la pantalla LCD. */
+
+#define             
+
 
 #endif	LCD_44780_H */
 
