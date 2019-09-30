@@ -61,7 +61,7 @@ void retardo_us(unsigned long ret2)     /* Función para generar retardos en us*/
     Inicia_Timer2();
     return;
 }
-
+xxxxxxxxx
 void retardo_ms(unsigned long ret2)     /* Función para generar retardos en ms*/
 {                                       /* máximo 1000us. */
     if(ret2 > 1000)
