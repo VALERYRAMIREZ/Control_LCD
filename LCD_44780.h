@@ -27,7 +27,7 @@
 
 /* Definición de prototipos de función para el control de la pantalla LCD.    */
 
-void Inicia_LCD4(unsigned short dato,bool tipo);/* Prototipo de función para
+void Inicia_LCD4(unsigned short dato);      /* Prototipo de función para
                                              * inicializar la pantalla LCD.   */
 
 #endif	LCD_44780_H */
