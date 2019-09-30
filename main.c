@@ -11,10 +11,12 @@
 #include "E_S.h"
 #include "temporizadores.h"
 #include "interrup.h"
+#include "LCD_44780.h"
 
 int main(void) {
     Tipo_Osc(PROSC);
     Confi_PuertoD(0b1111000000000000);
+    Inicia_LCD4(55);
     Inicia_Interr();
     retardo_s(70);
     PORTDbits.RD6 = 1;

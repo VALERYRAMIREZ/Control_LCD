@@ -30,5 +30,5 @@
 void Inicia_LCD4(unsigned short dato);      /* Prototipo de función para
                                              * inicializar la pantalla LCD.   */
 
-#endif	LCD_44780_H */
+#endif	/*LCD_44780_H */
 
