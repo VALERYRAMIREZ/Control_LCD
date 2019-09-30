@@ -109,3 +109,6 @@ void Detiene_Timer2(void)               /* Función para detener el timer 2. */
 {
     T2CONbits.TON = 0;
 }
+
+
+erkglnqogfnqòfnqognqeòfnqefòqenroe
