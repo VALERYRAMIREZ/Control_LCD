@@ -3,13 +3,13 @@
 
 /* Definición de funciones para el control de la pantalla LCD. */
 
-void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
-{                                       /* pantalla LCD.                      */
-    delay_ms(16);                       /* Inicialización y espera.           */
+void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
+{                                           /* pantalla LCD.                  */
+    retardo_ms(16);                         /* Inicialización y espera.       */
     
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
     D7 = 0;
     D6 = 0;
@@ -17,11 +17,11 @@ void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
     D4 = 1;
     E = 0;
     
-    delay_ms(5);
+    retardo_ms(5);
     
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
     D7 = 0;
     D6 = 0;
@@ -29,11 +29,11 @@ void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
     D4 = 1;
     E = 0;
     
-    delay_us(100);
+    retardo_us(100);
     
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
     D7 = 0;
     D6 = 0;
@@ -41,11 +41,11 @@ void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
     D4 = 1;
     E = 0;
     
-    delay_us(100);
+    retardo_us(100);
     
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
     D7 = 0;
     D6 = 0;
@@ -53,11 +53,11 @@ void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
     D4 = 1;
     E = 0;
     
-    delay_us(100);
+    retardo_us(100);
     
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
     D7 = 0;
     D6 = 0;
@@ -65,11 +65,11 @@ void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
     D4 = 0;
     E = 0;  
     
-    delay_ms(100);                  /* Número de líneas y tipo de fuente      */
-    
+    retardo_ms(100);                        /* Número de líneas y tipo de     */
+                                            /* fuente.      */
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
     D7 = 1;
     D6 = 0;
@@ -77,11 +77,11 @@ void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
     D4 = 0;
     E = 0;
     
-    delay_us(100);                  /* Se apaga el LCD.                       */
+    retardo_us(100);                        /* Se apaga el LCD.               */
     
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
     D7 = 0;
     D6 = 0;
@@ -89,11 +89,11 @@ void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
     D4 = 1;
     E = 0;
     
-    delay_us(100);                  
+    retardo_us(100);                  
     
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
     D7 = 1;
     D6 = 0;
@@ -101,11 +101,11 @@ void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
     D4 = 0;
     E = 0;
 
-    delay_us(100);                  /* Se enciende el LCD.                    */
+    retardo_us(100);                        /* Se enciende el LCD.            */
     
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
     D7 = 0;
     D6 = 0;
@@ -113,11 +113,11 @@ void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
     D4 = 1;
     E = 0;
     
-    delay_us(100);                  
+    retardo_us(100);                  
     
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
     D7 = 0;
     D6 = 0;
@@ -125,11 +125,11 @@ void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
     D4 = 1;
     E = 0;
     
-    delay_us(100);                  /* Configuración del modo de entrada.     */
-    
+    retardo_us(100);                        /* Configuración del modo de
+                                             *  entrada.                      */
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
     D7 = 0;
     D6 = 0;
@@ -137,16 +137,16 @@ void Inicia_LCD4(unsigned short dato,bool tipo)/* función para inicializar la */
     D4 = 1;
     E = 0;
     
-    delay_us(100);                  
+    retardo_us(100);                  
     
     RS = 0;
     RW = 0;
-    delay_us(1);
+    retardo_us(1);
     E = 1;
-    D7 = 1;                    /* Cursor encendido                           */
+    D7 = 1;                             /* Cursor encendido.                  */
     D6 = 0;                    
-    D5 = 1;                    /* Incremento del cursor                      */
-    D4 = 1;                    /* Desplazamiento del display al aparecer la  */
-                                /* data.                                      */
+    D5 = 1;                             /* Incremento del cursor.             */
+    D4 = 1;                             /* Desplazamiento del display al      */
+                                        /* aparecer la data.                  */
     E = 0;
 }
