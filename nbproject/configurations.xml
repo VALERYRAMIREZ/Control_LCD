@@ -8,6 +8,7 @@
       <itemPath>sistema.h</itemPath>
       <itemPath>E_S.h</itemPath>
       <itemPath>LCD_44780.h</itemPath>
+      <itemPath>temporizadores.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,11 +21,13 @@
       <itemPath>sistema.c</itemPath>
       <itemPath>E_S.c</itemPath>
       <itemPath>LCD_44780.c</itemPath>
+      <itemPath>temporizadores.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/configurations.xml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -186,7 +189,7 @@
         <property key="legacy-libc" value="true"/>
         <property key="mpreserve-all" value="false"/>
         <property key="oXC16glb-macros" value=""/>
-        <property key="output-file-format" value="elf"/>
+        <property key="output-file-format" value="coff"/>
         <property key="preserve-all" value="false"/>
         <property key="preserve-file" value=""/>
         <property key="relaxed-math" value="false"/>
