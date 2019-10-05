@@ -15,6 +15,7 @@ void Inicia_Interr(void);                   /* Prototipo de función para
                                              * configurar e iniciar las fuentes
                                              * de interrupción. */
 
+
 /* Prototipos de función para manejar las fuentes de interrupción */
 
 void __attribute__((interrupt(auto_psv))) _T2Interrupt(void);/* Prototipo de
