@@ -11,7 +11,7 @@
 
 // CONFIG2
 
-#pragma config POSCMOD = EC // Primary Oscillator Select (EC oscillator mode selected)
+#pragma config POSCMOD = HS // Primary Oscillator Select (EC oscillator mode selected)
 #pragma config IOL1WAY = ON // IOLOCK One-Way Set Enable bit (Write RP Registers Once)
 #pragma config OSCIOFNC = OFF // Primary Oscillator Output Function (OSCO functions as CLKO (FOSC/2))
 #pragma config FCKSM = CSDCMD // Clock Switching and Monitor (Both Clock Switching and Fail-safe Clock Monitor are disabled)
