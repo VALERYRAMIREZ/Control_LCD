@@ -59,7 +59,10 @@ void retardo_us(unsigned long ret2)     /* Función para generar retardos en us*/
     ret2 >>= 16;                        /* para generar retardos en us.       */
     PR3 = (unsigned int) ret2;
     Inicia_Timer232();
-    while(IEC0bits.T3IE == 0);
+    do
+    {
+        asm("nop");
+    }while(IEC0bits.T3IE == 0);
     T2CONbits.T32 = 0;
     return;
 }
