@@ -3,11 +3,13 @@
 void Inicia_Interr(void)                    /* Función para configurar e iniciar
                                              * las fuentes de interrupción. */
 {
-    IPC2bits.T3IP = 1;                      /* Se habilita la interrupción del*/
-    IFS0bits.T3IF = 0;                      /* timer 2 con prioridad 1 (la */
-    IEC0bits.T3IE = 1;                      /* inmediata superior a la del CPU*/
-                                            /* la cual es cero . */
-}
+    IEC0bits.T3IE = 1;                      /* Se habilita la interrupción    */
+                                            /* para el timer de 32 bits, se   */
+    IPC2bits.T3IP = 1;                      /* establece la prioridad de la   */
+    IFS0bits.T3IF = 0;                      /* interrupción en 1 y se borra la*/
+                                            /* y se borra la bandera de       */
+                                            /* del timer de 32 bits.          */
+}                                           
 
 
 /* Funciones para el manejo de interrupciones */
