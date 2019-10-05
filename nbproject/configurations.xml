@@ -4,7 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>bit_config.c</itemPath>
       <itemPath>sistema.h</itemPath>
       <itemPath>E_S.h</itemPath>
       <itemPath>LCD_44780.h</itemPath>
