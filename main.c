@@ -16,12 +16,12 @@
 int main(void) {
     Tipo_Osc(PROSC);
     Confi_PuertoD(0b1111000000000000);
-    Inicia_LCD4(55);
     Inicia_Interr();
-    retardo_s(70);
+    Inicia_LCD4(55);
+    //retardo_s(70);
     PORTDbits.RD6 = 1;
     while(IEC0bits.T3IE != 0);
-    if(IEC0bits.T3IE == 0)
+    if(IEC0bits.T3IE == 1)
     {
         PORTDbits.RD6 = 0;
     }
