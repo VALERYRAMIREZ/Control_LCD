@@ -18,5 +18,4 @@ void __attribute__((interrupt(auto_psv))) _T3Interrupt(void)/* Función para   */
 {                                           /* manejo de la interrupción del  */
     T2CONbits.TON = 0;                      /* timer 32 para usarlo como      */
     IFS0bits.T3IF = 0;                      /* temporizador de 32 bits.       */
-    IEC0bits.T3IE = 0;
 }
