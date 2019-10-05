@@ -4,11 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>bit_config.c</itemPath>
       <itemPath>sistema.h</itemPath>
       <itemPath>E_S.h</itemPath>
       <itemPath>LCD_44780.h</itemPath>
       <itemPath>temporizadores.h</itemPath>
+      <itemPath>interrup.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -17,11 +17,13 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>bit_config.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>sistema.c</itemPath>
       <itemPath>E_S.c</itemPath>
       <itemPath>LCD_44780.c</itemPath>
       <itemPath>temporizadores.c</itemPath>
+      <itemPath>interrup.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
