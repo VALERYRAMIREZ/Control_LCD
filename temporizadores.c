@@ -58,7 +58,7 @@ void retardo_us(unsigned long ret2)     /* Función para generar retardos en us*/
     PR2 = (unsigned int) ret2;          /* Valores a precargar en PR2 a PR3   */
     ret2 >>= 16;                        /* para generar retardos en us.       */
     PR3 = (unsigned int) ret2;
-    Inicia_Timer2();
+    Inicia_Timer232();
     while(IEC0bits.T3IE == 0);
     return;
 }
@@ -78,7 +78,7 @@ void retardo_ms(unsigned long ret2)     /* Función para generar retardos en ms*/
     PR2 = (unsigned int) ret2;          /* Valores a precargar en PR2 a PR3   */
     ret2 >>= 16;                        /* para generar retardos en us.       */
     PR3 = (unsigned int) ret2;
-    Inicia_Timer2();
+    Inicia_Timer232();
     while(IEC0bits.T3IE == 0);
     return;
 }
@@ -98,7 +98,7 @@ void retardo_s(unsigned long ret2)      /* Función para generar retardos en ms*/
     PR2 = (unsigned int) ret2;          /* Valores a precargar en PR2 a PR3   */
     ret2 >>= 16;                        /* para generar retardos en us.       */
     PR3 = (unsigned int) ret2;
-    Inicia_Timer2();
+    Inicia_Timer232();
     while(IEC0bits.T3IE == 0);
     return;
 }
@@ -111,4 +111,14 @@ void Inicia_Timer2(void)                /* Función para iniciar el timer 2. */
 void Detiene_Timer2(void)               /* Función para detener el timer 2. */
 {
     T2CONbits.TON = 0;
+}
+
+void Inicia_Timer232(void)              /* Funcion para iniciar el timer 23 de*/
+{                                       /* 32 bits.                           */
+    T2CONbits.T32 = 1;
+}
+
+void Detiene_Timer232(void)             /* Funcion para iniciar el timer 23 de*/
+{                                       /* 32 bits.                           */
+    T2CONbits.T32 = 0;
 }

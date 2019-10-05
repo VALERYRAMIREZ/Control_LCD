@@ -39,13 +39,19 @@ void retardo_us(unsigned long ret2);     /* Prototipo de función para generar
 void retardo_ms(unsigned long ret2);     /* Prototipo de función para generar
                                          * retardos en ms. */
 
-void retardo_s(unsigned long ret2);      /* Prototipo de función para generar
+void retardo_s(unsigned long ret2);     /* Prototipo de función para generar
                                          * retardos en s. */
 
 void Inicia_Timer2(void);               /* Prototipo de función para iniciar el
                                          * funcionamiento del timer 2. */
 
 void Detiene_Timer2(void);              /* Prototipo de función para detner el
+                                         * funcionamiento del timer 2. */
+
+void Inicia_Timer232(void);             /* Prototipo de función para detner el
+                                         * funcionamiento del timer 2. */
+
+void Detiene_Timer232(void);            /* Prototipo de función para detner el
                                          * funcionamiento del timer 2. */
 
 #endif	/* TEMPORIZADORES_H */
