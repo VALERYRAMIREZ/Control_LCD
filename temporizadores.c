@@ -63,7 +63,7 @@ void retardo_us(unsigned long ret2)     /* Función para generar retardos en us*/
     {
         asm("nop");
     }
-    Detiene_Timer2() = 0;
+    Detiene_Timer2();
     return;
 }
 
@@ -87,7 +87,7 @@ void retardo_ms(unsigned long ret2)     /* Función para generar retardos en ms*/
     {
         asm("nop");
     }
-    Detiene_Timer2() = 0;
+    Detiene_Timer2();
     return;
 }
 
@@ -111,7 +111,7 @@ void retardo_s(unsigned long ret2)      /* Función para generar retardos en ms*/
     {
         asm("nop");
     }
-    Detiene_Timer2() = 0;
+    Detiene_Timer2();
     return;
 }
 
