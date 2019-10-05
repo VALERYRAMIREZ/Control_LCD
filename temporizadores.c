@@ -58,12 +58,12 @@ void retardo_us(unsigned long ret2)     /* Función para generar retardos en us*/
     PR2 = (unsigned int) ret2;          /* Valores a precargar en PR2 a PR3   */
     ret2 >>= 16;                        /* para generar retardos en us.       */
     PR3 = (unsigned int) ret2;
-    Inicia_Timer232();
-    do
+    Inicia_Timer2();
+    while(IEC0bits.T3IE == 1)
     {
         asm("nop");
-    }while(IEC0bits.T3IE == 0);
-    T2CONbits.T32 = 0;
+    }
+    Detiene_Timer2() = 0;
     return;
 }
 
@@ -83,7 +83,10 @@ void retardo_ms(unsigned long ret2)     /* Función para generar retardos en ms*/
     ret2 >>= 16;                        /* para generar retardos en us.       */
     PR3 = (unsigned int) ret2;
     Inicia_Timer2();
-    while(IEC0bits.T3IE == 0);
+    while(IEC0bits.T3IE == 1)
+    {
+        asm("nop");
+    }
     Detiene_Timer2() = 0;
     return;
 }
@@ -104,8 +107,11 @@ void retardo_s(unsigned long ret2)      /* Función para generar retardos en ms*/
     ret2 >>= 16;                        /* para generar retardos en us.       */
     PR3 = (unsigned int) ret2;
     Inicia_Timer2();
-    while(IEC0bits.T3IE == 0);
-    Detiene_Timer(2);
+    while(IEC0bits.T3IE == 1)
+    {
+        asm("nop");
+    }
+    Detiene_Timer2() = 0;
     return;
 }
 
