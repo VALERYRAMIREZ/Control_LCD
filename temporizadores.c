@@ -84,7 +84,7 @@ void retardo_ms(unsigned long ret2)     /* Función para generar retardos en ms*/
     PR3 = (unsigned int) ret2;
     Inicia_Timer2();
     while(IEC0bits.T3IE == 0);
-    Detiene_Timer2() = 0;
+    Detiene_Timer2();
     return;
 }
 
