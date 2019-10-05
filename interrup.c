@@ -9,6 +9,7 @@ void Inicia_Interr(void)                    /* Función para configurar e iniciar
                                             /* la cual es cero . */
 }
 
+
 /* Funciones para el manejo de interrupciones */
 
 void __attribute__((interrupt(auto_psv))) _T3Interrupt(void)/* Función para   */
