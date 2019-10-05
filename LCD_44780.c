@@ -15,6 +15,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;
     D5 = 1;
     D4 = 1;
+    retardo_us(1);
     E = 0;
     
     retardo_ms(10);
@@ -27,6 +28,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;
     D5 = 1;
     D4 = 1;
+    retardo_us(1);
     E = 0;
     
     retardo_us(100);
@@ -39,6 +41,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;
     D5 = 1;
     D4 = 1;
+    retardo_us(1);
     E = 0;
     
     retardo_us(100);
@@ -51,6 +54,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;
     D5 = 1;
     D4 = 1;
+    retardo_us(1);
     E = 0;
     
     retardo_us(100);
@@ -63,6 +67,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;
     D5 = 1;
     D4 = 0;
+    retardo_us(1);
     E = 0;  
     
     retardo_ms(100);                        /* Número de líneas y tipo de     */
@@ -75,6 +80,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;
     D5 = 0;
     D4 = 0;
+    retardo_us(1);
     E = 0;
     
     retardo_us(100);                        /* Se apaga el LCD.               */
@@ -87,6 +93,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;
     D5 = 1;
     D4 = 1;
+    retardo_us(1);
     E = 0;
     
     retardo_us(100);                  
@@ -99,6 +106,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;
     D5 = 0;
     D4 = 0;
+    retardo_us(1);
     E = 0;
 
     retardo_us(100);                        /* Se enciende el LCD.            */
@@ -111,6 +119,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;
     D5 = 1;
     D4 = 1;
+    retardo_us(1);
     E = 0;
     
     retardo_us(100);                  
@@ -123,6 +132,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;
     D5 = 0;
     D4 = 1;
+    retardo_us(1);
     E = 0;
     
     retardo_us(100);                        /* Configuración del modo de
@@ -135,6 +145,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;
     D5 = 1;
     D4 = 1;
+    retardo_us(1);
     E = 0;
     
     retardo_us(100);                  
@@ -147,6 +158,6 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     D6 = 0;                    
     D5 = 1;                             /* Incremento del cursor.             */
     D4 = 1;                             /* Desplazamiento del display al      */
-                                        /* aparecer la data.                  */
+    retardo_us(1);                      /* aparecer la data.                  */
     E = 0;
 }
