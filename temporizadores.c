@@ -61,7 +61,6 @@ void retardo_us(unsigned long ret2)     /* Función para generar retardos en us*/
     Inicia_Timer2();
     return;
 }
-xxxxxxxxx
 void retardo_ms(unsigned long ret2)     /* Función para generar retardos en ms*/
 {                                       /* máximo 1000us. */
     if(ret2 > 1000)
@@ -109,6 +108,3 @@ void Detiene_Timer2(void)               /* Función para detener el timer 2. */
 {
     T2CONbits.TON = 0;
 }
-
-
-erkglnqogfnqòfnqognqeòfnqefòqenroe

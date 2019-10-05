@@ -3,18 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/sistema.c</file>
-            <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/E_S.h</file>
+            <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/LCD_44780.h</file>
+            <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/bit_config.c</file>
             <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/E_S.c</file>
             <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/temporizadores.c</file>
+            <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/interrup.c</file>
             <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/temporizadores.h</file>
-            <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/LCD_44780.h</file>
+            <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/sistema.c</file>
+            <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/E_S.h</file>
             <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/LCD_44780.c</file>
             <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/main.c</file>
-            <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/bit_config.c</file>
             <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/interrup.h</file>
-            <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/interrup.c</file>
-            <file>file:/C:/Users/valery/MPLABXProjects/Control_LCD.X/nbproject/configurations.xml</file>
         </group>
     </open-files>
 </project-private>
