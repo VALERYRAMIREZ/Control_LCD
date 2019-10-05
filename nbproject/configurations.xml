@@ -7,6 +7,7 @@
       <itemPath>bit_config.c</itemPath>
       <itemPath>sistema.h</itemPath>
       <itemPath>E_S.h</itemPath>
+      <itemPath>interrup.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,6 +19,7 @@
       <itemPath>main.c</itemPath>
       <itemPath>sistema.c</itemPath>
       <itemPath>E_S.c</itemPath>
+      <itemPath>interrup.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
