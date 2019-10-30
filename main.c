@@ -19,9 +19,12 @@ int main(void) {
     Inicia_Interr();
     Inicia_LCD4(55);
     //retardo_s(70);
-    PORTDbits.RD6 = 1;
-    while(IEC0bits.T3IE != 0);
-    if(IEC0bits.T3IE == 1)
+
+    while(T2CONbits.TON == 1)
+    {
+        PORTDbits.RD6 = 1;   
+    }
+    while(T2CONbits.TON == 0)
     {
         PORTDbits.RD6 = 0;
     }
