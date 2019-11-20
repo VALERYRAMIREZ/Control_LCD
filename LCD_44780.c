@@ -185,8 +185,8 @@ void Desplaza_Cur(char dir, char salto)
     E = 1;
     D7 = 0;                             /* Cursor encendido.                  */
     D6 = 1;                    
-    D5 = 0;                             /* Incremento del cursor.             */
-    D4 = 1;                             /* Desplazamiento del display al      */
+    D5 = salto;                         /* Incremento del cursor.             */
+    D4 = dir;                           /* Desplazamiento del display al      */
     retardo_us(1);                      /* aparecer la data.                  */
     E = 0;
 }
