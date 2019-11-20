@@ -30,4 +30,7 @@
 void Inicia_LCD4(unsigned short dato);      /* Prototipo de función para
                                              * inicializar la pantalla LCD.   */
 
+void Desplaza_Cur(char dir, char salto);    /* Prototipo de función para mover
+                                             * el cursor hacia una dirección. */
+
 #endif	/* LCD_44780_H */
