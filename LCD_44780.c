@@ -12,7 +12,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     RS = 0;
     RW = 0;
     D7 = 0;
-    D6 = 0;
+    D6 = 1;
     D5 = 1;
     D4 = 1;
     retardo_us(5);
