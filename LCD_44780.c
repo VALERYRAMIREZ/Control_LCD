@@ -14,21 +14,10 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     RW = 0;
     D7 = 0;
     D6 = 0;
-    D5 = 0;
-    D4 = 0;
+    D5 = 1;
+    D4 = 1;
     retardo_us(5);
-    E = 0;
-    
-    retardo_us(5);
-    E = 1;
-    RS = 0;
-    RW = 0;
-    D7 = 1;
-    D6 = 0;
-    D5 = 0;
-    D4 = 0;
-    retardo_us(5);
-    E = 0;  
+    E = 0; 
     
     retardo_ms(10);
 
@@ -38,8 +27,8 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     RW = 0;
     D7 = 1;
     D6 = 0;
-    D5 = 0;
-    D4 = 0;
+    D5 = 1;
+    D4 = 1;
     retardo_us(5);
     E = 0;
     
@@ -89,7 +78,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     RS = 0;
     RW = 0;
     D7 = 1;
-    D6 = 0;
+    D6 = 1;
     D5 = 0;
     D4 = 0;
     retardo_us(5);
@@ -167,7 +156,7 @@ void Inicia_LCD4(unsigned short dato)       /* función para inicializar la    */
     RS = 0;
     RW = 0;
     D7 = 0;                             /* Cursor encendido.                  */
-    D6 = 0;                    
+    D6 = 1;                    
     D5 = 1;                             /* Incremento del cursor.             */
     D4 = 1;                             /* Desplazamiento del display al      */
     retardo_us(5);                      /* aparecer la data.                  */
