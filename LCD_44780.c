@@ -15,6 +15,84 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
     PORTD = 0x60 | 0x04;
     retardo_us(5);
     E = 0;
+    
+    retardo_ms(10);
+    
+    E = 1;
+    PORTD = 0x60 | 0x04;
+    retardo_us(5);
+    E = 0;
+    
+    retardo_us(100);
+    
+    E = 1;
+    PORTD = 0x60 | 0x04;
+    retardo_us(5);
+    E = 0;
+    
+    retardo_us(5);
+    
+    E = 1;
+    PORTD = 0x60 | 0x04;
+    retardo_us(5);
+    E = 0;
+
+    retardo_us(5);
+    
+    E = 1;
+    PORTD = 0x20 | 0x04;
+    retardo_us(5);
+    E = 0;
+    
+    retardo_us(5);
+    
+    E = 1;
+    PORTD = 0x0c | 0x04;
+    retardo_us(5);
+    E = 0;    
+    
+    retardo_us(5);
+    
+    E = 1;
+    PORTD = 0x60 | 0x04;
+    retardo_us(5);
+    E = 0;
+    
+    retardo_us(5);
+    
+    E = 1;
+    PORTD = 0x08 | 0x04;
+    retardo_us(5);
+    E = 0;
+    
+    retardo_us(5);
+    
+    E = 1;
+    PORTD = 0x60 | 0x04;
+    retardo_us(5);
+    E = 0;
+    
+    retardo_us(5);
+    
+    E = 1;
+    PORTD = 0x40 | 0x04;
+    retardo_us(5);
+    E = 0;
+    
+    retardo_us(5);
+    
+    E = 1;
+    PORTD = 0x60 | 0x04;
+    retardo_us(5);
+    E = 0;
+    
+    retardo_us(5);
+    
+    E = 1;
+    PORTD = 0x78 | 0x04;
+    retardo_us(5);
+    E = 0;
+    
 //    retardo_ms(16);                         /* Inicialización y espera.       */
 //    
 //    E = 0;                                  /* Escribo 03h (1/4)              */
