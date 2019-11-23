@@ -12,28 +12,28 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
     E = 0;
     retardo_us(5);
     E = 1;
-    PORTD = 0x03 | 0x100;
+    PORTD = 0x30 | 0x100;
     retardo_us(5);
     E = 0;
     
     retardo_ms(10);
     
     E = 1;
-    PORTD = 0x03 | 0x100;
+    PORTD = 0x30 | 0x100;
     retardo_us(5);
     E = 0;
     
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x03 | 0x100;
+    PORTD = 0x30 | 0x100;
     retardo_us(5);
     E = 0;
     
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x03 | 0x100;
+    PORTD = 0x30 | 0x100;
     retardo_us(5);
     E = 0;
 
@@ -54,7 +54,7 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x03 | 0x100;
+    PORTD = 0x30 | 0x100;
     retardo_us(5);
     E = 0;
     
@@ -68,7 +68,7 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x03 | 0x100;
+    PORTD = 0x30 | 0x100;
     retardo_us(5);
     E = 0;
     
@@ -82,7 +82,7 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x03 | 0x100;
+    PORTD = 0x30 | 0x100;
     retardo_us(5);
     E = 0;
     
