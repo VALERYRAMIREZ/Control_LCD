@@ -12,60 +12,11 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
     E = 0;                                  
     retardo_us(5);
     E = 1;
-    PORTD = 0x30 | 0x100;
+    PORTD = 0x20 | 0x100;
     retardo_us(5);
     E = 0;
     
     retardo_ms(10);
-    
-    E = 1;
-    PORTD = 0x30 | 0x100;
-    retardo_us(5);
-    E = 0;
-    
-    retardo_us(100);
-    
-    E = 1;
-    PORTD = 0x30 | 0x100;
-    retardo_us(5);
-    E = 0;
-    
-    retardo_us(100);
-    
-    E = 1;
-    PORTD = 0x30 | 0x100;
-    retardo_us(5);
-    E = 0;
-
-    retardo_us(100);
-    
-    E = 1;
-    PORTD = 0x30 | 0x100;
-    retardo_us(5);
-    E = 0;
-
-    retardo_us(100);
-    
-    E = 1;
-    PORTD = 0x02 | 0x100;
-    retardo_us(5);
-    E = 0;
-    
-    retardo_us(100);
-    
-    E = 1;
-    PORTD = 0xc0 | 0x100;
-    retardo_us(5);
-    E = 0;    
-    
-    retardo_us(100);
-    
-    E = 1;
-    PORTD = 0x30 | 0x100;
-    retardo_us(5);
-    E = 0;
-    
-    retardo_us(100);
     
     E = 1;
     PORTD = 0x80 | 0x100;
@@ -75,7 +26,49 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x30 | 0x100;
+    PORTD = 0x20 | 0x100;
+    retardo_us(5);
+    E = 0;
+    
+    retardo_us(100);
+    
+    E = 1;
+    PORTD = 0x80 | 0x100;
+    retardo_us(5);
+    E = 0;
+
+    retardo_us(100);
+    
+    E = 1;
+    PORTD = 0x00 | 0x100;
+    retardo_us(5);
+    E = 0;
+
+    retardo_us(100);
+    
+    E = 1;
+    PORTD = 0x60 | 0x100;
+    retardo_us(5);
+    E = 0;
+    
+    retardo_us(100);
+    
+    E = 1;
+    PORTD = 0x00 | 0x100;
+    retardo_us(5);
+    E = 0;    
+    
+    retardo_us(100);
+    
+    E = 1;
+    PORTD = 0xe0 | 0x100;
+    retardo_us(5);
+    E = 0;
+    
+    retardo_us(100);
+    
+    E = 1;
+    PORTD = 0x00 | 0x100;
     retardo_us(5);
     E = 0;
     
@@ -83,20 +76,6 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
     
     E = 1;
     PORTD = 0x10 | 0x100;
-    retardo_us(5);
-    E = 0;
-    
-    retardo_us(100);
-    
-    E = 1;
-    PORTD = 0x30 | 0x100;
-    retardo_us(5);
-    E = 0;
-    
-    retardo_us(100);
-    
-    E = 1;
-    PORTD = 0xf0 | 0x100;
     retardo_us(5);
     E = 0;
 }
