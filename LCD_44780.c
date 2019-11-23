@@ -5,12 +5,10 @@
 
 void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
 {                                           /* pantalla LCD.                  */
-     PORTD = 0;
+    PORTD = 0;
     
     retardo_ms(16);
-    
-    E = 0;                                  
-    retardo_us(5);
+                                     
     E = 1;
     PORTD = 0x30 | 0x100;
     retardo_us(5);
@@ -90,6 +88,13 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
     
     E = 1;
     PORTD = 0xe0 | 0x100;
+    retardo_us(5);
+    E = 0;
+
+    retardo_us(100);
+    
+    E = 1;
+    PORTD = 0x00 | 0x100;
     retardo_us(5);
     E = 0;
     
