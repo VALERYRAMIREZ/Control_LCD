@@ -12,84 +12,84 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
     E = 0;
     retardo_us(5);
     E = 1;
-    PORTD = 0x30 | 0x04;
+    PORTD = 0x03 | 0x04;
     retardo_us(5);
     E = 0;
     
     retardo_ms(10);
     
     E = 1;
-    PORTD = 0x30 | 0x04;
+    PORTD = 0x03 | 0x04;
     retardo_us(5);
     E = 0;
     
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x30 | 0x04;
+    PORTD = 0x03 | 0x04;
     retardo_us(5);
     E = 0;
     
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x30 | 0x04;
+    PORTD = 0x03 | 0x04;
     retardo_us(5);
     E = 0;
 
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x20 | 0x04;
+    PORTD = 0x02 | 0x04;
     retardo_us(5);
     E = 0;
     
     retardo_us(100);
     
     E = 1;
-    PORTD = 0xc0 | 0x04;
+    PORTD = 0x08 | 0x04;
     retardo_us(5);
     E = 0;    
     
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x30 | 0x04;
+    PORTD = 0x03 | 0x04;
     retardo_us(5);
     E = 0;
     
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x80 | 0x04;
+    PORTD = 0x08 | 0x04;
     retardo_us(5);
     E = 0;
     
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x30 | 0x04;
+    PORTD = 0x03 | 0x04;
     retardo_us(5);
     E = 0;
     
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x10 | 0x04;
+    PORTD = 0x01 | 0x04;
     retardo_us(5);
     E = 0;
     
     retardo_us(100);
     
     E = 1;
-    PORTD = 0x30 | 0x04;
+    PORTD = 0x03 | 0x04;
     retardo_us(5);
     E = 0;
     
     retardo_us(100);
     
     E = 1;
-    PORTD = 0xf0 | 0x04;
+    PORTD = 0xff | 0x04;
     retardo_us(5);
     E = 0;
 }
