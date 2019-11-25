@@ -43,16 +43,22 @@ void Confi_Timer2(unsigned int tempo2, unsigned int confi2)/* Función para
     PR2 = tempo2*0x000a;
 }
 
+void Confi_Timer23(void)
+{
+    T2CON = 0;
+    T3CON = 0;
+    TMR2 = 0;
+    TMR3 = 0;  
+    T2CON = 0b0000000000001000;
+}
+
 void retardo_us(unsigned long ret2)     /* Función para generar retardos en us*/
 {                                       /* máximo 1000us. */
     if(ret2 > 1000)
     {
         ret2 = 1000;
     }
-    T2CON = 0;
-    T3CON = 0;
-    TMR2 = 0;
-    TMR3 = 0;
+    Confi_Timer23();
     T2CON = 0b0000000000001000;
     ret2 *= 0x000a;
     PR2 = (unsigned int) ret2;          /* Valores a precargar en PR2 a PR3   */
@@ -73,11 +79,7 @@ void retardo_ms(unsigned long ret2)     /* Función para generar retardos en ms*/
     {
         ret2 = 1000;
     }
-    T2CON = 0;
-    T3CON = 0;
-    TMR2 = 0;
-    TMR3 = 0;
-    T2CON = 0b0000000000001000;
+    Confi_Timer23();
     ret2 *= 0x2710;
     PR2 = (unsigned int) ret2;          /* Valores a precargar en PR2 a PR3   */
     ret2 >>= 16;                        /* para generar retardos en us.       */
@@ -97,11 +99,7 @@ void retardo_s(unsigned long ret2)      /* Función para generar retardos en ms*/
     {
         ret2 = 1000;
     }
-    T2CON = 0;
-    T3CON = 0;
-    TMR2 = 0;
-    TMR3 = 0;
-    T2CON = 0b0000000000001000;
+    Confi_Timer23();
     ret2 *= 0x00989680;
     PR2 = (unsigned int) ret2;          /* Valores a precargar en PR2 a PR3   */
     ret2 >>= 16;                        /* para generar retardos en us.       */
