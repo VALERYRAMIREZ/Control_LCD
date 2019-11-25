@@ -31,7 +31,10 @@ void Detiene_Timer1(void);              /* Prototipo de función para detener el
 
 void Confi_Timer2(unsigned int tempo2, unsigned int confi2);/* Prototipo de
                                          * función para configurar el
-                                         * funcionamiento del timer 2. */ 
+                                         * funcionamiento del timer 2. */
+
+void Confi_Timer23(void);               /* Prototipo de función para configurar
+                                         * el temporizador 23                 */
 
 void retardo_us(unsigned long ret2);     /* Prototipo de función para generar
                                          * retardos en us, en múltipos de 5us.*/
