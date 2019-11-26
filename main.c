@@ -17,10 +17,8 @@ int main(void) {
     Tipo_Osc(PROSC);
     Confi_PuertoD(0b1111000000000000);
     Inicia_Interr();
-    Inicia_LCD4(55);
-    PORTDbits.RD7 = 1;
-    //Desplaza_Cur(1,0);
-    //retardo_s(70);
+    Inicia_LCD4();
+    Posicion_Cur4b(2,5);
 
     while(T2CONbits.TON == 1)
     {
