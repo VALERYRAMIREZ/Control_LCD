@@ -21,19 +21,17 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
 
     retardo_us(100);
     
-    Envia_Com(0x20);
+    Envia_Com(CF);
+    
+    Envia_Com4b(CF | 0x08);
+    
+    Envia_Com4b(CF | 0x08);
+    
+    Envia_Com4b(CME);
+    
+    Envia_Com4b(EAP | 0x06);
 
-    retardo_us(100);
-    
-    Envia_Com4b(0x28);
-    
-    Envia_Com4b(0x28);
-    
-    Envia_Com4b(0x06);
-    
-    Envia_Com4b(0x0e);
-
-    Envia_Com4b(0x01);
+    Envia_Com4b(BP);
 }
 
 void Envia_Com(unsigned int comandoLCD)
