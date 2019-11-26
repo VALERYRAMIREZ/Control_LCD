@@ -67,27 +67,27 @@ void Posicion_Cur4b(char fila, char columna)
     {
         case 1:
         {
-            Envia_Com4b(EDDR | lin_1_i);
+            Envia_Com4b(EDDR | (lin_1_i + columna));
             break;  
         }
         case 2:
         {
-            Envia_Com4b(EDDR | lin_2_i);
+            Envia_Com4b(EDDR | (lin_2_i + columna));
             break; 
         }
         case 3:
         {
-            Envia_Com4b(EDDR | lin_3_i);
+            Envia_Com4b(EDDR | (lin_3_i + columna));
             break; 
         }
         case 4:
         {
-            Envia_Com4b(EDDR | lin_4_i);
+            Envia_Com4b(EDDR | (lin_4_i + columna));
             break; 
         }
         default:
         {
-            Envia_Com4b(EDDR | lin_1_i);
+            Envia_Com4b(EDDR | (lin_1_i + columna));
             break;  
         }
     }
