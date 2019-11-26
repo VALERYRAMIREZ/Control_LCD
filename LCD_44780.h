@@ -69,6 +69,12 @@ void Envia_Com4b(unsigned int ComandoLCD4);/* Prototipo de función para enviar
                                          * un comando a la pantalla LCD en
                                          * formato de 4 bits.                 */
 
+void Borra_Pant4b(void);                /* Prototipo de función para borrar la
+                                         * pantalla LCD.                      */
+
+void Retorno_Carro4b(void);             /* Prototipo de función para hacer el
+                                         * retorno de carro en modo de 4 bits.*/
+
 void Posicion_Cur4b(char fila, char columna);/* Prototipo de función para mover
                                          * el cursor hacia una dirección.     */
 
