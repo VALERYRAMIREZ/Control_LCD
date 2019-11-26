@@ -25,51 +25,30 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
 
     retardo_us(100);
     
-    Envia_Com(0x20);
+    Envia_Com4(0x28);
     
-    retardo_us(100);
+    Envia_Com4(0x28);
     
-    Envia_Com(0x80);
+    Envia_Com4(0x06);
     
-    retardo_us(100);
-    
-     Envia_Com(0x20);
-    
-    retardo_us(100);
-    
-    Envia_Com(0x80);
-    
-    retardo_us(100);
-    
-    Envia_Com(0x00);
-    
-    retardo_us(100);
-    
-    Envia_Com(0x60);
-    
-    retardo_us(100);
-    
-    Envia_Com(0x00);
-    
-    retardo_us(100);
-    
-    Envia_Com(0xe0);
+    Envia_Com4(0x0e);
 
-    retardo_us(100);
-    
-    Envia_Com(0x00);
-    
-    retardo_us(100);
-    
-    Envia_Com(0x10);
+    Envia_Com4(0x01);
 }
 
 void Envia_Com(unsigned int comandoLCD)
 {
+    retardo_us(5);
     E = 1;
     PORTD = comandoLCD | 0x100;
     retardo_us(5);
     E = 0;
+}
+
+void Envia_Com4(unsigned int comandoLCD4)
+{
+    Envia_Com(comandoLCD4 & 0xf0);
+    Envia_Com((comandoLCD4 << 4) & 0xf0);
 }
 
 void Desplaza_Cur(char dir, char salto)
