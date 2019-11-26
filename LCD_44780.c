@@ -25,15 +25,15 @@ void Inicia_LCD4(unsigned short dato)       /* Función para inicializar la    */
 
     retardo_us(100);
     
-    Envia_Com4(0x28);
+    Envia_Com4b(0x28);
     
-    Envia_Com4(0x28);
+    Envia_Com4b(0x28);
     
-    Envia_Com4(0x06);
+    Envia_Com4b(0x06);
     
-    Envia_Com4(0x0e);
+    Envia_Com4b(0x0e);
 
-    Envia_Com4(0x01);
+    Envia_Com4b(0x01);
 }
 
 void Envia_Com(unsigned int comandoLCD)
@@ -45,7 +45,7 @@ void Envia_Com(unsigned int comandoLCD)
     E = 0;
 }
 
-void Envia_Com4(unsigned int comandoLCD4)
+void Envia_Com4b(unsigned int comandoLCD4)
 {
     Envia_Com(comandoLCD4 & 0xf0);
     Envia_Com((comandoLCD4 << 4) & 0xf0);
