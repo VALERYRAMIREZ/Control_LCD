@@ -37,7 +37,7 @@
 #define         DCGR    0x40            /* Establecer dirección de la CGRAM   */
 #define         DDDR    0x80            /* Establecer dirección de la DDRAM   */
 #define         LBFD    0x100           /* Leer bandera de ocupado y contenido
-                                        /* del contador.                      */
+                                         * del contador.                      */
 #define         EDCD    0x200           /* Escribe dato a la DD o CG RAM e
                                            incrementa o decrementa el contador
                                            de dirección (AC).                      */
@@ -52,6 +52,10 @@ void Inicia_LCD4(unsigned short dato);      /* Prototipo de función para
 
 void Envia_Com(unsigned int comandoLCD);    /* Prototipo de función para enviar
                                              * un comando a la pantalla LCD.  */
+
+void Envia_Com4b(unsigned int ComandoLCD4); /* Prototipo de función para enviar
+                                             * un comando a la pantalla LCD en
+                                             * formato de 4 bits.             */
 
 void Desplaza_Cur(char dir, char salto);    /* Prototipo de función para mover
                                              * el cursor hacia una dirección. */
