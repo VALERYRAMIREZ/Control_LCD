@@ -31,7 +31,7 @@ void Inicia_LCD4(void)                      /* Función para inicializar la    */
     
     Envia_Com4b(EAP | 0x06);
 
-    Envia_Com4b(BP);
+    Borra_Pant4b();
 }
 
 void Envia_Com(unsigned int comandoLCD)
@@ -43,10 +43,22 @@ void Envia_Com(unsigned int comandoLCD)
     E = 0;
 }
 
-void Envia_Com4b(unsigned int comandoLCD4)
-{
-    Envia_Com(comandoLCD4 & 0xf0);
+void Envia_Com4b(unsigned int comandoLCD4)/* Función para enviar comando con  */
+{                                       /* la pantalla incializada en modo    */
+    Envia_Com(comandoLCD4 & 0xf0);      /* de 4 bits.                         */
     Envia_Com((comandoLCD4 << 4) & 0xf0);
+}
+
+void Borra_Pant4b(void)                 /* Función para borrar pantalla en    */
+{                                       /* modo de 4 bits.                    */
+    Envia_Com4b(BP);
+    retardo_ms(2);
+}
+
+void Retorno_Carro4b(void)              /* Función para realizar retorno de   */
+{                                       /* en modo de 4 bits.                 */
+    Envia_Com4b(RC);
+    retardo_ms(2);
 }
 
 void Posicion_Cur4b(char fila, char columna)
