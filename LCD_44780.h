@@ -75,32 +75,32 @@ void Borra_Pant4b(void);                /* Prototipo de función para borrar la
 void Retorno_Carro4b(void);             /* Prototipo de función para hacer el
                                          * retorno de carro en modo de 4 bits.*/
 
-Conf_Modo_Ent4b(unsigned int modo);     /* Prototipo de función para          */
+void Conf_Modo_Ent4b(unsigned int modo);/* Prototipo de función para          */
                                         /* configurar el contador de dirección*/
                                         /* además de de especificar el        */
                                         /* el deplazamiento de la pantalla o  */
                                         /* cursor durante una escritura o     */
                                         /* de datos.                          */
 
-Enc_Apa4b(unsigned int interr);         /* Prototipo de función para encender */
+void Enc_Apa4b(unsigned int interr);    /* Prototipo de función para encender */
                                         /* y apagar la pantalla, también      */
                                         /* configura el parpadeo del caracter */
                                         /* en la posición del cursor.         */
 
-Desp_Cur4b(unsigned int direc);         /* Prototipo de función para desplazar*/
+void Desp_Cur4b(unsigned int direc);    /* Prototipo de función para desplazar*/
                                         /* el cursor sin cambiar el contenido */
                                         /* de la DDRAM.                       */
 
-Conf_Func4b(unsigned int funcion);      /* Prototipo de función para          */
+void Conf_Func4b(unsigned int funcion);  /* Prototipo de función para          */
                                         /* establecer la logntud del bus de   */
                                         /* datos, el número de líneas de la   */
                                         /* pantalla y el tamaño de los        */
                                         /* caracteres.                        */
 
-Conf_CGRAM4b(unsigned int dirC);        /* Prototipo de función para          */
+void Conf_CGRAM4b(unsigned int dirC);   /* Prototipo de función para          */
                                         /* establecer la dirección de la CGRAM*/
 
-Conf_DDRAM4b(unsigned int dirD);        /* Prototipo de función para          */
+void Conf_DDRAM4b(unsigned int dirD);   /* Prototipo de función para          */
                                         /* establecer la dirección de la CGRAM*/
 
 /* Debo seguir trabajando en las función Lee_BF4b para retornar el dato       */
@@ -108,7 +108,7 @@ Conf_DDRAM4b(unsigned int dirD);        /* Prototipo de función para          */
 //                                        /* bandera de ocupado y el contenido  */
 //                                        /* de el contador de direcciones      */
 
-Esc_DCRAM4b(unsigned int car);          /* Prototipo de función para          */
+void Esc_DCRAM4b(unsigned int car);          /* Prototipo de función para          */
                                         /* escribir datos a la DDRAM o CGRAM, */
                                         /* e incrementar o decrementar el     */
                                         /* contador de direcciones.           */
