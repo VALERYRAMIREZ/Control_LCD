@@ -61,6 +61,62 @@ void Retorno_Carro4b(void)              /* Función para realizar retorno de   */
     retardo_ms(2);
 }
 
+Conf_Modo_Ent4b(unsigned int modo)      /* Coloca la dirección de la DDRAM    */
+{                                       /* se quiera incrementar o decrementar*/
+    Envia_Com4b(CME | modo);            /* también especifica el salto del    */
+    retardo_us(40);                     /* cursor durante una lectura o       */
+}                                       /* escritura de datos.                */
+
+Enc_Apa4b(unsigned int interr)          /* Enciende y apaga la pantalla, el   */
+{                                       /* el cursor, también sirve para      */
+    Envia_Com4b(EAP | interr);          /* hacer parpadear el cursor en la    */
+    retardo_us(40);                     /* posición actual.                   */
+}
+
+Desp_Cur4b(unsigned int direc)          /* Mueve el cursor o desplaza la      */
+{                                       /* pantalla sin cambiar el contenido  */
+    Envia_Com4b(CDD | direc);           /* de la DDRAM.                       */
+    retardo_us(40);
+}
+
+Conf_Func4b(unsigned int funcion)       /* Configura la longitud del bus de   */
+{                                       /* de datos, el número de líneas de la*/
+    Envia_com4b(CF | funcion);          /* pantalla y la fuente de los        */
+    retardo_us(40);                     /* caracteres.                        */
+}
+
+Conf_CGRAM4b(unsigned int dirC)         /* Establece la dirección de la CGRAM */     
+{                                       /* para poder enviar o recibr datos a */
+    Envia_Com4b(ECGR | dirC);           /* esa dirección.                     */
+    retardo_us(40);                     
+}
+
+Conf_DDRAM4b(unsigned int dirD)         /* Establece la dirección de la DDRAM */
+{                                       /* para poder enviar o recibir datos a*/
+    Envia_Com4b(EDDR | dirD);           /* esa dirección.                     */
+    retardo_us(40);
+}
+
+Lee_BF4b(unsigned int dirB)             /* Lee la bandera de ocupado y también*/
+{                                       /* lee el valor del contador de       */
+    Envia_Com4b(LBFD | dirB);           /* direcciones.                       */
+    retardo_us(5);
+}
+
+Esc_DCRAM4b(unsigned int car)
+{
+    Envia_Com4b(EDCD | car);            /* Escribe dato a la DDRAM o CGRAM e  */
+    retardo_us(40);                     /* incrementa o decrementa el contador*/
+}                                       /* de direcciones.                    */
+
+/* Debo seguir trabajando en las función Lee_DCRAM4b para retornar el dato    */
+
+//Lee_DCRAM4b(unsigned int dat)           /* Lee dato de la DDRAM o CGRAM e     */
+//{                                       /* incrementa o decrementa el contador*/
+//    Envia_Com4b(LDCD | dat)             /* de direcciones.                    */
+//    retardo_us(40);
+//}
+
 void Posicion_Cur4b(char fila, char columna)
 {
     switch(fila)
