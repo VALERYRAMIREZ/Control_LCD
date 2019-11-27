@@ -43,10 +43,29 @@ void Envia_Com(unsigned int comandoLCD)
     E = 0;
 }
 
+void Envia_Com_RAM(unsigned int comandoLCD)
+{
+    retardo_us(5);
+    RS = 1;
+    retardo_us(5);
+    E = 1;
+    PORTD = comandoLCD | 0x100;
+    retardo_us(5);
+    E = 0;
+    retardo_us(5);
+    RS = 0;
+}
+
 void Envia_Com4b(unsigned int comandoLCD4)/* Función para enviar comando con  */
 {                                       /* la pantalla incializada en modo    */
     Envia_Com(comandoLCD4 & 0xf0);      /* de 4 bits.                         */
     Envia_Com((comandoLCD4 << 4) & 0xf0);
+}
+
+void Envia_Com_RAM4b(unsigned int comandoLCD4)/* Función para enviar comando  */
+{                                       /* con la pantalla incializada en modo*/
+    Envia_Com_RAM(comandoLCD4 & 0xf0);  /* de 4 bits.                         */
+    Envia_Com_RAM((comandoLCD4 << 4) & 0xf0);
 }
 
 void Borra_Pant4b(void)                 /* Función para borrar pantalla en    */
