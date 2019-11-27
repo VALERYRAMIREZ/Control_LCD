@@ -65,9 +65,19 @@ void Inicia_LCD4(void);                 /* Prototipo de función para
 void Envia_Com(unsigned int comandoLCD);/* Prototipo de función para enviar
                                          * un comando a la pantalla LCD.      */
 
-void Envia_Com4b(unsigned int ComandoLCD4);/* Prototipo de función para enviar
+void Envia_Com_RAM(unsigned int ComandoLCD);/* Prototipo de función para
+                                         * enviar un comando de escritura a la
+                                         * CGRAM o DDRAM de la pantalla LCD en
+                                         * ormato de 4 bits.                  */
+
+void Envia_Com4b(unsigned int comandoLCD4);/* Prototipo de función para enviar
                                          * un comando a la pantalla LCD en
                                          * formato de 4 bits.                 */
+
+void Envia_Com_RAM4b(unsigned int comandoLCD4)/* Prototipo de función para
+                                         * enviar un comando de manipulación de
+                                         * la CGRAM o DDRAM con la pantalla en
+                                         * modo de 4 bits.                    */
 
 void Borra_Pant4b(void);                /* Prototipo de función para borrar la
                                          * pantalla LCD.                      */
