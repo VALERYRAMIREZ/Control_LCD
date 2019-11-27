@@ -19,6 +19,7 @@ int main(void) {
     Inicia_Interr();
     Inicia_LCD4();
     Posicion_Cur4b(4,14);
+    Esc_DCRAM4b('a')
 
     while(T2CONbits.TON == 1)
     {
