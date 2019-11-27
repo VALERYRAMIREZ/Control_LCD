@@ -81,7 +81,7 @@ void Desp_Cur4b(unsigned int direc)     /* Mueve el cursor o desplaza la      */
 
 void Conf_Func4b(unsigned int funcion)  /* Configura la longitud del bus de   */
 {                                       /* de datos, el número de líneas de la*/
-    Envia_com4b(CF | funcion);          /* pantalla y la fuente de los        */
+    Envia_Com4b(CF | funcion);          /* pantalla y la fuente de los        */
     retardo_us(40);                     /* caracteres.                        */
 }
 
