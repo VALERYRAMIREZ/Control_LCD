@@ -118,13 +118,13 @@ void Conf_DDRAM4b(unsigned int dirD)    /* Establece la dirección de la DDRAM */
 
 void Lee_BF4b(unsigned int dirB)        /* Lee la bandera de ocupado y también*/
 {                                       /* lee el valor del contador de       */
-    Envia_Com4b(LBFD | dirB);           /* direcciones.                       */
+    Envia_Com_RAM4b(LBFD | dirB);           /* direcciones.                       */
     retardo_us(5);
 }
 
 void Esc_DCRAM4b(unsigned int car)      /* Escribe dato a la DDRAM o CGRAM e  */
 {                                       /* incrementa o decrementa el contador*/
-    Envia_Com4b(EDCD | car);            /* de direcciones.                    */
+    Envia_Com_RAM4b(EDCD | car);            /* de direcciones.                    */
     retardo_us(40);                    
 }                                       
 
