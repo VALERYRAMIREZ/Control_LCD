@@ -47,9 +47,8 @@ void Envia_Com_RAM(unsigned int comandoLCD)
 {
     retardo_us(5);
     RS = 1;
-    retardo_us(5);
     E = 1;
-    PORTD = comandoLCD | 0x100;
+    PORTD = comandoLCD | 0x500;
     retardo_us(5);
     E = 0;
     retardo_us(5);
@@ -124,7 +123,7 @@ void Lee_BF4b(unsigned int dirB)        /* Lee la bandera de ocupado y también*/
 
 void Esc_DCRAM4b(unsigned int car)      /* Escribe dato a la DDRAM o CGRAM e  */
 {                                       /* incrementa o decrementa el contador*/
-    Envia_Com_RAM4b(EDCD | car);            /* de direcciones.                    */
+    Envia_Com_RAM4b(car);               /* de direcciones.                    */
     retardo_us(40);                    
 }                                       
 
