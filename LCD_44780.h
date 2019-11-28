@@ -74,7 +74,7 @@ void Envia_Com4b(unsigned int comandoLCD4);/* Prototipo de función para enviar
                                          * un comando a la pantalla LCD en
                                          * formato de 4 bits.                 */
 
-void Envia_Com_RAM4b(unsigned int comandoLCD4)/* Prototipo de función para
+void Envia_Com_RAM4b(unsigned int comandoLCD4);/* Prototipo de función para
                                          * enviar un comando de manipulación de
                                          * la CGRAM o DDRAM con la pantalla en
                                          * modo de 4 bits.                    */
