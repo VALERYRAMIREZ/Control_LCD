@@ -20,15 +20,6 @@ int main(void) {
     Inicia_LCD4();
     Posicion_Cur4b(4,14);
     Esc_DCRAM4b('a');
-
-    while(T2CONbits.TON == 1)
-    {
-        PORTDbits.RD6 = 1;   
-    }
-    while(T2CONbits.TON == 0)
-    {
-        PORTDbits.RD6 = 0;
-    }
     while(1);
     return 0;
 }
