@@ -18,8 +18,8 @@ int main(void) {
     Confi_PuertoD(0b1111000000000000);
     Inicia_Interr();
     Inicia_LCD4();
-    Posicion_Cur4b(4,14);
-    Esc_DCRAM4b('a');
+    Posicion_Cur4b(1,1);
+    Esc_DCRAM4b("      MENÚ      ");
     while(1);
     return 0;
 }
