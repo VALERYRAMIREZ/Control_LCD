@@ -121,11 +121,14 @@ void Lee_BF4b(unsigned int dirB)        /* Lee la bandera de ocupado y también*/
     retardo_us(5);
 }
 
-void Esc_DCRAM4b(unsigned int car)      /* Escribe dato a la DDRAM o CGRAM e  */
-{                                       /* incrementa o decrementa el contador*/
-    Envia_Com_RAM4b(car);               /* de direcciones.                    */
-    retardo_us(40);                    
-}                                       
+void Esc_DCRAM4b(char *fra)             /* Escribe dato a la DDRAM o CGRAM e  */
+{   
+    while(*fra)                         /* incrementa o decrementa el contador*/
+    {                                   /* de direcciones.                    */
+        Envia_Com_RAM4b(*(fra++));
+        retardo_us(40);
+    }
+}                                      
 
 /* Debo seguir trabajando en las función Lee_DCRAM4b para retornar el dato    */
 
