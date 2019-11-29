@@ -118,7 +118,7 @@ void Conf_DDRAM4b(unsigned int dirD);   /* Prototipo de función para          */
 //                                        /* bandera de ocupado y el contenido  */
 //                                        /* de el contador de direcciones      */
 
-void Esc_DCRAM4b(unsigned int car);          /* Prototipo de función para          */
+void Esc_DCRAM4b(char *fra);            /* Prototipo de función para          */
                                         /* escribir datos a la DDRAM o CGRAM, */
                                         /* e incrementar o decrementar el     */
                                         /* contador de direcciones.           */
