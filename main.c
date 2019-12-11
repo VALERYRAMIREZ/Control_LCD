@@ -16,8 +16,7 @@
 
 int main(void) {
     Tipo_Osc(PROSC);
-    Confi_PuertoD(0b1111000000000000);
-    Inicia_Interr();
+    Confi_E_S();
     Inicia_Interr();
     Inicia_LCD4();
     Posicion_Cur4b(1,1);
