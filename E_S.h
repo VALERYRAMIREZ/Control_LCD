@@ -10,11 +10,17 @@
 #ifndef E_S_H
 #define	E_S_H
 
-#include <xc.h> // include processor files - each processor file is guarded.  
+#include <xc.h>
 
 void Confi_PuertoD(unsigned int pinesD);    /* Prototipo de función para
                                              * configurar el funcionamiento
                                              * del puerto D. */
+
+void Confi_PuertoE(unsigned char pinesE);/* Prototipo de función para configurar
+                                         * el funcionamiento del puerto D.    */
+
+void Confi_E_S(void);                   /* Prototipo de función para configurar
+                                         * el funcionamiento de los puertos.  */
 
 #endif	/* E_S_H */
 
