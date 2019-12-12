@@ -18,8 +18,14 @@ void Inicia_Interr(void);                   /* Prototipo de función para
 
 /* Prototipos de función para manejar las fuentes de interrupción */
 
-void __attribute__((interrupt(auto_psv))) _T2Interrupt(void);/* Prototipo de
+void __attribute__((interrupt(no_auto_psv))) _T2Interrupt(void);/* Prototipo de
                                              * función para manejar la
                                              * interrupción del timer 2. */
+
+void __attribute__((interrupt(no_auto_psv))) _CNInterrupt(void);/* Prototipo de
+                                             * función para manejar la
+                                             * interrupción por notificación
+                                             * de cambio en los pines
+                                             * seleccionados.                 */
 #endif	/* INTERRUP_H */
 
