@@ -10,6 +10,7 @@
       <itemPath>mensajes.h</itemPath>
       <itemPath>sistema.h</itemPath>
       <itemPath>temporizadores.h</itemPath>
+      <itemPath>botones.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -26,6 +27,7 @@
       <itemPath>mensajes.c</itemPath>
       <itemPath>sistema.c</itemPath>
       <itemPath>temporizadores.c</itemPath>
+      <itemPath>botones.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
