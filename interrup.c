@@ -29,6 +29,6 @@ void __attribute__((interrupt(no_auto_psv))) _T3Interrupt(void)/* Función para*/
 void __attribute__((interrupt(no_auto_psv))) _CNInterrupt(void)/* Función para*/
 {                                       /* el manejo de la interrupción por   */
                                         /* cambio de estado en los terminales */
-                                        /* habilitados para este tipo de      */
+    IFS1bits.CNIF = 0;                  /* habilitados para este tipo de      */
                                         /* interrupción.                      */
 }
