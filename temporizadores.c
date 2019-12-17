@@ -144,6 +144,21 @@ void Confi_Timer2(unsigned int tempo4, unsigned int confi4)/* Función para    */
     //PR4 = tempo4*0x000a;
 }
 
+
+
+void retardo_T4_ms(unsigned long ret4)  /* Función para generar retardos en ms*/
+{                                       /* máximo 1000us.                     */
+    if(ret4 > 1000)                     /* La función está diseñada para      */
+    {                                   /* iniciar el temporizador y salir de */
+        ret4 = 1000;                    /* la misma y de esa manera no        */
+    }                                   /* bloquear el funcionamiento del     */
+    Confi_Timer4();                     /* programa.                          */
+    ret4 *= 0x512;
+    PR4 = ret4;
+    Inicia_Timer4();
+    return;
+}
+
 void Inicia_Timer4(void)                /* Inicia el timer 4.                 */
 {
     T4CONbits.TON = 1;
