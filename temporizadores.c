@@ -140,8 +140,6 @@ void Confi_Timer2(unsigned int tempo4, unsigned int confi4)/* Función para    */
     T4CON = 0;                          /* temporizador 4.                    */
     TMR4 = 0;
     T4CON = confi4;                      
-    PR4 = tempo4;
-    //PR4 = tempo4*0x000a;
 }
 
 void Inicia_Timer4(void)                /* Inicia el timer 4.                 */
