@@ -11,6 +11,7 @@
       <itemPath>sistema.h</itemPath>
       <itemPath>temporizadores.h</itemPath>
       <itemPath>botones.h</itemPath>
+      <itemPath>globales.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

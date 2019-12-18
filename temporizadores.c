@@ -132,3 +132,22 @@ void Detiene_Timer232(void)             /* Funcion para iniciar el timer 23 de*/
 {                                       /* 32 bits.                           */
     T2CONbits.T32 = 0;
 }
+
+/* Funciones para el manejo del temporizador 4.                               */
+
+void Confi_Timer2(unsigned int tempo4, unsigned int confi4)/* Función para    */
+{                                       /* configurar el funcionamiento del   */
+    T4CON = 0;                          /* temporizador 4.                    */
+    TMR4 = 0;
+    T4CON = confi4;                      
+}
+
+void Inicia_Timer4(void)                /* Inicia el timer 4.                 */
+{
+    T4CONbits.TON = 1;
+}  
+
+void Detiene_Timer4(void)               /* Detiene el timer 4.                */
+{
+    T4CONbits.TON = 0;
+}
