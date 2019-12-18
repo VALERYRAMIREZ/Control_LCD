@@ -21,17 +21,20 @@ void Inicia_Interr(void)                /* Función para configurar e iniciar
                                         /* temporizador.                      */
 }
 
-/* Funciones para el manejo de interrupciones */
+/*               Funciones para el manejo de interrupciones                   */
 
 void __attribute__((interrupt(no_auto_psv))) _T3Interrupt(void)/* Función para*/
-{                                           /* manejo de la interrupción del  */
-    T2CONbits.TON = 0;                      /* timer 32 para usarlo como      */
-    IFS0bits.T3IF = 0;                      /* temporizador de 32 bits.       */
+{                                       /* manejo de la interrupción del      */
+    T2CONbits.TON = 0;                  /* timer 32 para usarlo como          */
+    IFS0bits.T3IF = 0;                  /* temporizador de 32 bits.           */
 }
 
 void __attribute__((interrupt(no_auto_psv))) _CNInterrupt(void)/* Función para*/
 {                                       /* el manejo de la interrupción por   */
-                                        /* cambio de estado en los terminales */
-    IFS1bits.CNIF = 0;                  /* habilitados para este tipo de      */
-                                        /* interrupción.                      */
+    senales.tecla ^= senales.tecla;     /* cambio de estado en los terminales */
+                                        /* habilitados para este tipo de      */
+                                        /* interrupción. Cada vez que entra   */
+    IFS1bits.CNIF = 0;                  /* conmuta la bandera de tecla        */
+                                        /* presionada. La intención de esto es*/
+                                        /* chequear si */
 }

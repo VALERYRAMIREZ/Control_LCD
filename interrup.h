@@ -9,7 +9,13 @@
 #ifndef INTERRUP_H
 #define	INTERRUP_H
 
-#include <xc.h> 
+#include <xc.h>
+#include "globales.h"
+
+/*            Definición de constantes a usar en las interrupciones.          */
+
+extern BANDERASBits senales;            /* Depende de las variables definidas
+senales.tecla = 0;                      /* en globales.h.                     */
 
 void Inicia_Interr(void);                   /* Prototipo de función para
                                              * configurar e iniciar las fuentes
