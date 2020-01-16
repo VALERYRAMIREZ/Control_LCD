@@ -57,5 +57,19 @@ void Inicia_Timer232(void);             /* Prototipo de función para detner el
 void Detiene_Timer232(void);            /* Prototipo de función para detner el
                                          * funcionamiento del timer 2. */
 
+/* Definición de prototipos de función  para el manejo del temporizador 4.    */
+
+void Confi_Timer4();                    /* Prototipo de función para configurar
+                                         * el temporizador 4.                 */
+
+void Inicia_Timer4(void);               /* Prototipo de función para iniciar el
+                                         * funcionamiento del timer 1. */
+
+void Detiene_Timer4(void);              /* Prototipo de función para detener el
+                                         * funcionamiento del timer 1. */
+
+void retardo_T4_ms(unsigned long ret2); /* Prototipo de función para generar
+                                         * retardos en ms. */
+
 #endif	/* TEMPORIZADORES_H */
 
