@@ -31,7 +31,7 @@ void __attribute__((interrupt(no_auto_psv))) _T3Interrupt(void)/* Función para*/
 
 void __attribute__((interrupt(no_auto_psv))) _CNInterrupt(void)/* Función para*/
 {                                       /* el manejo de la interrupción por   */
-    senales.tecla ^= senales.tecla;     /* cambio de estado en los terminales */
+    senales.BANDERASBits.tecla ^= senales.BANDERASBits.tecla;     /* cambio de estado en los terminales */
                                         /* habilitados para este tipo de      */
                                         /* interrupción. Cada vez que entra   */
     IFS1bits.CNIF = 0;                  /* conmuta la bandera de tecla        */

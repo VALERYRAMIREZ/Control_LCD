@@ -14,13 +14,11 @@
 
 /*            Definición de constantes a usar en las interrupciones.          */
 
-extern BANDERASBits senales;            /* Depende de las variables definidas
-senales.tecla = 0;                      /* en globales.h.                     */
+SENALES senales;                    /* Implementación de los banderas de      */
+                                    /* control para las interrupciones        */
 
-void Inicia_Interr(void);                   /* Prototipo de función para
-                                             * configurar e iniciar las fuentes
-                                             * de interrupción. */
-
+void Inicia_Interr(void);           /* Prototipo de función para configurar e
+                                     * iniciar las fuentes de interrupción.   */
 
 /* Prototipos de función para manejar las fuentes de interrupción */
 

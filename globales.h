@@ -13,14 +13,17 @@
 
 /*              Variables globales a usar en el sistema.                      */
 
-volatile unsigned int BANDERAS;         /* Variable tipo estructura para      */
-typedef struct tagBANDERASBits          /* marcar eventos de interrupciones en*/
-{                                       /* las interrupciones.                */
-    unsigned int :15;
-    unsigned int tecla:1;               /* Bandera para indicar el uso de la 
+typedef union                           /* Variable tipo estructura para      */
+{                                       /* marcar eventos de interrupciones en*/
+    unsigned int banderas;              /* marcar eventos de interrupciones en*/
+    struct                              /* las interrupciones.                */
+    {                                   
+        unsigned int restantes:15;
+        unsigned int tecla:1;           /* Bandera para indicar el uso de la 
                                          * interrupción por notificación de
                                          * cambio en un pin.                  */
-} BANDERASBits;
+    } BANDERASBits;
+} SENALES;
 
 #endif	/* XC_GLOBALES_H */
 
