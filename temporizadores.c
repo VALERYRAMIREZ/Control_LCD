@@ -133,13 +133,29 @@ void Detiene_Timer232(void)             /* Funcion para iniciar el timer 23 de*/
     T2CONbits.T32 = 0;
 }
 
-/* Funciones para el manejo del temporizador 4.                               */
+/*                  Funciones para el manejo del temporizador 4.              */
 
-void Confi_Timer2(unsigned int tempo4, unsigned int confi4)/* Función para    */
+void Confi_Timer4()                     /* Función para                       */
 {                                       /* configurar el funcionamiento del   */
     T4CON = 0;                          /* temporizador 4.                    */
-    TMR4 = 0;
-    T4CON = confi4;                      
+    TMR4 = 0;                     
+    PR4 = 0;                            /* FALTA LLENAR ESTA FUNCIÓN.         */
+    //PR4 = tempo4*0x000a;
+}
+
+
+
+void retardo_T4_ms(unsigned long ret4)  /* Función para generar retardos en ms*/
+{                                       /* máximo 1000us.                     */
+    if(ret4 > 1000)                     /* La función está diseñada para      */
+    {                                   /* iniciar el temporizador y salir de */
+        ret4 = 1000;                    /* la misma y de esa manera no        */
+    }                                   /* bloquear el funcionamiento del     */
+    Confi_Timer4();                     /* programa.                          */
+    ret4 *= 0x512;
+    PR4 = ret4;
+    Inicia_Timer4();
+    return;
 }
 
 void Inicia_Timer4(void)                /* Inicia el timer 4.                 */
