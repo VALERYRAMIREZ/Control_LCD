@@ -23,6 +23,12 @@ void Inicia_Interr(void)                /* Función para configurar e iniciar
 
 /*               Funciones para el manejo de interrupciones                   */
 
+void __attribute__((interrupt(no_auto_psv))) _T1Interrupt(void)/* Función para*/
+{                                       /* manejo de la interrupción del      */
+                                        /* timer 1, para usarlo como ciclo de */
+    IFS0bits.T1IF =0;                   /* trabajo del sistema.               */
+}
+
 void __attribute__((interrupt(no_auto_psv))) _T3Interrupt(void)/* Función para*/
 {                                       /* manejo de la interrupción del      */
     T2CONbits.TON = 0;                  /* timer 32 para usarlo como          */

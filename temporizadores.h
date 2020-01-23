@@ -19,14 +19,14 @@
 
 /* Prototipos de función para la configuación de los temporizadores */
 
-void Confi_Timer1(unsigned int tempo1, unsigned int conf1);/* Prototipo de
+void Ciclo_Timer1(unsigned int tempo1, unsigned int conf1);/* Prototipo de
                                          * función para configurar el
                                          * funcionamiento del timer 1. */
 
-void Inicia_Timer1(void);               /* Prototipo de función para iniciar el
+void Inicia_Ciclo_Timer1(void);         /* Prototipo de función para iniciar el
                                          * funcionamiento del timer 1. */
 
-void Detiene_Timer1(void);              /* Prototipo de función para detener el
+void Detiene_Ciclo_Timer1(void);        /* Prototipo de función para detener el
                                          * funcionamiento del timer 1. */
 
 void Confi_Timer2(unsigned int tempo2, unsigned int confi2);/* Prototipo de
@@ -67,6 +67,19 @@ void Inicia_Timer4(void);               /* Prototipo de función para iniciar el
 
 void Detiene_Timer4(void);              /* Prototipo de función para detener el
                                          * funcionamiento del timer 1. */
+
+void Confi_Timer45(void);               /* Prototipo de función para configurar
+                                         * el timer45 en modo de 32 bits.     */
+
+void Ciclo45_ms(unsigned long ret45);   /* Prototipo de función para configurar
+                                         * el ciclo de trabajo del sistema en
+                                         * ms.                                */
+
+//void Inicia_Ciclo45(void);              /* Prototipo de función para comenzar
+//                                         * el ciclo de trabajo del sistema.   */
+//
+//void Detiene_Ciclo45(void);             /* Prototipo de función para detener el
+//                                         * ciclo de trabajo del sistema.      */
 
 void retardo_T4_ms(unsigned long ret2); /* Prototipo de función para generar
                                          * retardos en ms. */
