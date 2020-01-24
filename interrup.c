@@ -2,9 +2,9 @@
 #include "globales.h"
 
 
-SENALES senales;                        /* Declaración de la variable senales
-                                         * para usarla en la interrupción que
-                                         * sea necesaria.                     */
+SENALES senales;                        /* Declaración de la variable senales */
+//senales.tecla = 0;                      /* para usarla en la interrupción que */
+                                        /* sea necesaria.                     */
 
 void Inicia_Interr(void)                /* Función para configurar e iniciar
                                          * las fuentes de interrupción.       */
@@ -37,7 +37,7 @@ void __attribute__((interrupt(no_auto_psv))) _T3Interrupt(void)/* Función para*/
 
 void __attribute__((interrupt(no_auto_psv))) _CNInterrupt(void)/* Función para*/
 {                                       /* el manejo de la interrupción por   */
-    senales.BANDERASBits.tecla ^= senales.BANDERASBits.tecla;     /* cambio de estado en los terminales */
+    //senales.tecla ^= senales.tecla;     /* cambio de estado en los terminales */
                                         /* habilitados para este tipo de      */
                                         /* interrupción. Cada vez que entra   */
     IFS1bits.CNIF = 0;                  /* conmuta la bandera de tecla        */
