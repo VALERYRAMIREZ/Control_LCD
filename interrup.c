@@ -1,4 +1,10 @@
 #include "interrup.h"
+#include "globales.h"
+
+
+SENALES senales;                        /* Declaración de la variable senales
+                                         * para usarla en la interrupción que
+                                         * sea necesaria.                     */
 
 void Inicia_Interr(void)                /* Función para configurar e iniciar
                                          * las fuentes de interrupción.       */
