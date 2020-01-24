@@ -22,7 +22,7 @@ typedef union                           /* Variable tipo estructura para      */
         unsigned int tecla:1;           /* Bandera para indicar el uso de la 
                                          * interrupción por notificación de
                                          * cambio en un pin.                  */
-    } BANDERASBits;
+    };
 } SENALES;
 
 #endif	/* XC_GLOBALES_H */
