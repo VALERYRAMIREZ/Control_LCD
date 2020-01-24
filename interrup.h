@@ -9,12 +9,16 @@
 #ifndef INTERRUP_H
 #define	INTERRUP_H
 
-#include <xc.h> 
+#include <xc.h>
+#include "globales.h"
 
-void Inicia_Interr(void);                   /* Prototipo de función para
-                                             * configurar e iniciar las fuentes
-                                             * de interrupción. */
+/*            Definición de constantes a usar en las interrupciones.          */
 
+SENALES senales;                    /* Implementación de los banderas de      */
+                                    /* control para las interrupciones        */
+
+void Inicia_Interr(void);           /* Prototipo de función para configurar e
+                                     * iniciar las fuentes de interrupción.   */
 
 /* Prototipos de función para manejar las fuentes de interrupción */
 
