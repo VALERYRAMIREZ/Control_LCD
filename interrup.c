@@ -1,7 +1,5 @@
 #include "interrup.h"
 
-SENALES senales;                        /* Implementación de los banderas de  */
-                                        /* control para las interrupciones    */
 
 void Inicia_Interr(void)                /* Función para configurar e iniciar
                                          * las fuentes de interrupción.       */
