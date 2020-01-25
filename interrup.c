@@ -9,6 +9,10 @@ SENALES senales;                        /* Declaración de la variable senales */
 void Inicia_Interr(void)                /* Función para configurar e iniciar
                                          * las fuentes de interrupción.       */
 {
+    IEC0bits.T1IE = 1;                  /* Configuración de las interrupciones*/
+    IPC0bits.T1IP = 1;                  /* para el timer 1.                   */
+    IFS0bits.T1IF = 0;
+    
     IEC0bits.T3IE = 1;                  /* Se habilita la interrupción        */
                                         /* para el timer de 32 bits, se       */
     IPC2bits.T3IP = 1;                  /* establece la prioridad de la       */
