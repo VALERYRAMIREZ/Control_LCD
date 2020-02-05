@@ -153,4 +153,10 @@ void Mensaje_Der(char *mensaje);        /* Prototipo de función para imprimir
                                          * el mensaje con los caracteres
                                          * apareciendo de derecha a izquierda.*/
 
+void Menu(void);                        /* Prototipo de función para seleccionar
+                                         * el menú a desplegar en la panalla
+                                         * LCD.                               */
+
+
+
 #endif	/* LCD_44780_H */

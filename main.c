@@ -19,8 +19,6 @@ int main(void) {
     Confi_E_S();
     Inicia_Interr();
     Inicia_LCD4();
-    Posicion_Cur4b(1,1);
-    Ciclo_Timer1(100,0b0000000000000010);
     PORTDbits.RD11 = 1;
     Inicia_Ciclo_Timer1();
     while(!IFS0bits.T1IF);

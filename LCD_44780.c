@@ -3,6 +3,12 @@
 #include "mensajes.h"
 #include <stdio.h>
 
+/*       Definición de opciones de menú a desplegar en la pantalla LCD.       */
+
+const char *menu_i[] = {"1) Hora","2) Param. Motor","3) Manual","4) Auto"};
+const char *menu_r[] = {"DD","MM","AAAA","HH","MM","SS"};
+const char *menu_m[] = {"PP","II","DD"};
+
 /* Definición de funciones para el control de la pantalla LCD. */
 
 void Inicia_LCD4(void)                      /* Función para inicializar la    */
@@ -231,5 +237,15 @@ void Mensaje_Der(char *mensaje)         /* Prototipo de función para imprimir */
             retardo_ms(10);
         }
         Desp_Cur4b(lin_1_f - c);
+    }
+}
+
+void Menu(void)                         /* Función para mostrar el menú       */
+{                                       /* inicial en pantalla.               */
+    short linea;
+    for(linea = 0; linea <= 4;linea++)
+    {
+        Posicion_Cur4b(linea+1,0);
+        Mensaje_Ent((char*) menu_i[linea]);
     }
 }
